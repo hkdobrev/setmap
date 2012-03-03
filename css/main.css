@@ -1,0 +1,60 @@
+form {
+	width: 960px;
+	margin: 50px auto;
+}
+
+.css-map {
+	display: block;
+	width: 75%;
+	height: 250px;
+	border: 4px solid #fafbfa;
+}
+
+#location{
+    width: 355px;
+    text-align: left;
+    color: #333333;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 1px;
+    margin-left: 0;
+    margin-bottom: 1px;
+    position: relative;
+    bottom: 10px;
+    border: 1px solid #bbbbbb;
+    background-color: #fff5ed;
+    -webkit-transition: 0.3s border-color ease;
+    transition: 0.3s border-color ease;
+    -moz-transition: 0.3s border-color ease;
+    -webkit-box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.1); }
+
+#location:active, #location:focus {
+      border-color: #ee3c3c;
+      border-width: 2px;
+      margin-right: 8px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      -webkit-transition: 0.65s border-color ease;
+      transition: 0.65s border-color ease;
+      -moz-transition: 0.65s border-color ease;
+      outline: 0; }
+
+#searchLoc {
+  color: #ef751c;
+  text-decoration: underline;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  bottom: 10px;}

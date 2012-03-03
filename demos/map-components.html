@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Simple Map Demo - SetMap jQuery Plugin</title>
+		<link href="../css/main.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div id="my-map" class="css-map"></div>
+		<dl id="output">
+			<dt>Latitude: </dt>
+			<dd class="latitude"></dd>
+			<dt>Longitude: </dt>
+			<dd class="longitude"></dd>
+		</dl>
+		<div id="components">
+			<h4>Components:</h4>
+		</div>
+		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+		<script src="http://maps.googleapis.com/maps/api/js?language=en&sensor=false&region=US"></script>
+		<script defer src="../js/setmap.min.js"></script>
+		<script>
+			$(function () {
+				var myMap  = $('#my-map');
+				myMap.setmap({
+					components: true,
+					map: {
+						zoom: 8
+					},
+					marker: {
+						current: false,
+						position: {
+							latitude: 37.419,
+							longitude: -122.151
+						}
+					},
+					drop: function ( latitude, longitude, components ) {
+						var dl = $('#output'),
+						container = $('#components');
+						$('.latitude', dl).text(latitude);
+						$('.longitude', dl).text(longitude),
+						$.each(components, function ( index, value ) {
+							container.append('<p>' + value.long_name + '</p>');
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

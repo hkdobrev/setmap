@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Documentation - SetMap jQuery Plugin</title>
+ 		<link href="css/main.css" rel="stylesheet"/>
+		<style>
+			body {
+				width: 960px;
+				margin: 0 auto;
+			}
+			.tac {
+				text-align: center;
+			}
+			code {
+				background-color: #eaeaea;
+				color: #111;
+				font-family: monospace;
+				font-size: 13px;
+				display: block;
+				margin: 10px 0px 20px 40px;
+				padding: 0;
+				width: 65%;
+			}
+				
+			code p {
+				margin: 0px;
+				padding: 2px 3px;
+				display: block;
+			}
+				
+			code p:nth-child(2n) {
+				background-color: #dedede;
+			}
+				
+			code p:nth-child(2n+1) {
+				background-color: #f8f8f8;
+			}
+				
+			code p.html {
+				color: #22d;
+			}
+				
+			code p.js {
+				color: #c22;
+			}
+			
+			ul.examples > li + li{
+				margin-top: 100px;
+			}
+			
+			dt, dd {
+				display: block;
+				float: left;
+			}
+			dt {
+				clear: left;
+				width: 130px;
+			}
+			dl {
+				clear: both;
+				display: block;
+				width: 100%;
+				float: none;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tac">
+			<h1>SetMap jQUery Plugin for Google Maps</h1>
+			<p>by</p>
+			<p>Haralan Dobrev</p>
+			<p>Sold exclusively on CodeCanyon.net</p>
+			<p></p>
+		</div>
+		<ol>
+			<li id="toc">
+				<h2>Table of Contents</h2>
+				<ol>
+					<li>
+						<a href="#toc">Table of Contents</a>
+					</li>
+					<li>
+						<a href="#introduction">Introduction</a>
+						<ol>
+							<li><a href="#intro-description">Description</a></li>
+							<li><a href="#intro-features">Features</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#requirements">Requirements</a>
+					</li>
+					<li>
+						<a href="#usage">Usage examples</a>
+					</li>
+					<li>
+						<a href="#code-examples">Code Examples</a>
+						<ul>
+							<li><a href="#embed">Embed a map from Google Maps.</a></li>
+							<li><a href="#dimensions">Adjust the map dimensions by pure CSS.</a></li>
+							<li><a href="#geocoding">Geocoding.</a></li>
+							<li><a href="#reversed">Reversed Geocoding.</a></li>
+							<li><a href="#geolocation">HTML5 Geolocation.</a></li>
+							<li><a href="#setAddress">Setting the marker location dynamically through a plugin method.</a></li>
+							<li><a href="#components">Use the address components.</a></li>
+							<li><a href="#destroy-example">Destroying a plugin instance - returning the map container to its previous state.</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#options">Options</a>
+						<ul>
+							<li><a href="#opt-map">map</a></li>
+							<li><a href="#opt-marker">marker</a></li>
+							<li><a href="#opt-components">components</a></li>
+							<li><a href="#opt-drop">drop</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#methods">Methods</a>
+						<ul>
+							<li><a href="#setAddress">setAddress</a></li>
+							<li><a href="#setCoords">setCoords</a></li>
+							<li><a href="#destroy">destroy</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#demos">Demos</a>
+					</li>
+					<li>
+						<a href="#notes">Additional Notes</a>
+					</li>
+					<li>
+						<a href="#contact">Contact me</a>
+					</li>
+					<li>
+						<a href="#final">Conclusion</a>
+					</li>
+				</ol>
+			</li>
+			<li id="introduction">
+				<h2>Introduction</h2>
+				<ol>
+					<li id="intro-description">
+						<h3>Description</h3>
+						<p><strong>SetMap</strong> is a simple to use and yet powerful jQuery plugin which helps your users to select a location on a map with either typing or dragging.</p>
+						<p>It uses Google Maps and jQuery 1.6.4. It is strictly object-oriented and follows the implementation of the jQuery UI widgets.</p>
+						<p>Thus, it allows you to create multiple instances with just few lines of javascript and to use previously created maps with the same jQuery objects.</p>
+						<p>The plugin supports <strong>Geocoding</strong>, <strong>Reversed Geocoding</strong> and <strong>HTML5 Geolocation</strong>.</p>
+					</li>
+					<li>
+						<h3 id="intro-features">Features</h3>
+						<ul>
+							<li>Embed multiple maps with a single line of jQuery code</li>
+							<li>Very easy to use and set only the options you need</li>
+							<li>Set map dimensions with pure CSS</li>
+							<li>Get coordinates and full address when the user drags the marker around the map</li>
+							<li>Uses HTML5 Geolocation to set the map to the user's current location./li>
+							<li>Change the map location dynamically with coordinates or an address</li>
+							<li>Control the map zoom controls, map type, marker animation and more</li>
+							<li>Enables not draggable maps or static maps for showing off your venue or business</li>
+							<li>Add marker title to a location</li>
+							<li>Demos with great application of the plugin included</li>
+							<li>Thorough documentation with copy-paste examples</li>
+							<li>The source code is compliant with JSLint.</li>
+							<li>Follows the jQuery and jQuery UI design principles and best practices</li>
+							<li>Just 1.56kb gzipped</li>
+						</ul>
+					</li>
+				</ol>
+			</li>
+			<li id="requirements">
+				<h2>Requirements</h2>
+				<ul>
+					<li>
+						<p><strong>jQuery 1.4+</strong></p>
+						<p>The plugin can work with jQuery 1.4.0 or newer, but I recommend using the latest stable release 1.6.4 or 1.7 RC 2.</p>
+						<p>The demos contain the best way to load jQuery following the recommendation from HTML5 Boilerplate.</p>
+						<p>First you try to load it from the Google CDN and after that if jQuery is not laoded you load a local file.</p>
+					</li>
+					<li>
+						<p><strong>Google Maps Javascript API v3</strong></p>
+						<p>You can use the Google Maps API for Javascript with adding a single javascript file.</p>
+						<p>You can refer to the loading of the library in the demos. There are few parameters to be set in the URL of the script.</p>
+						<p>Only the sensor parameter is required. It should be set to true only if you are using a device with GPS hardware.</p>
+						<p>Other important parameters are region and language. The defaults are region=us and language=en.</p>
+						<p><strong>Note that the special features for Geocoding and Reversed Geocoding can be used only if you are showing a map to your users. If you hide the map and use these features of the plugin you are violating the Google Maps API Terms of Use!</strong></p>
+					</li>
+				</ul>
+			</li>
+			<li id="usage">
+				<h2>Usage Examples</h2>
+				<ul>
+					<li>
+						<p>You can have a single map located on your business or venue.</p>
+						<p>You can set the map draggable property to false so the user won't be able to drag the marker.</p>
+						<p>The map will just show off you place, but will allow the user to explore the surrounding area.</p>
+						<p>It's perfect for events or small businesses.</p>
+						<hr/>
+					</li>
+					<li>
+						<p>You can also embed a static non-movable map which will act like an image to beautify your app.</p>
+						<p>You even dynamically change the location to show a few places without interaction from the user.</p>
+						<hr/>
+					</li>
+					<li>
+						<p>You can have a form which prompts the user to point out a location.</p>
+						<p>You can have a map with a movable marker which the user can easily drag and drop.</p>
+						<p>And you can have a text field which will change the map dynamically with the user input.</p>
+						<p>This way you will provide your users with very quick and easy way to point an exact location.</p>
+						<p>And you will have exact coordinates plus a human readable addres which the user won't be entitled to write, but can customize for clarity.</p>
+						<hr/>
+					</li>
+					<li>
+						<p>You can ask for user's location with a map.</p>
+						<p>So the user will be able to fix his location on the map if it isn't correct.</p>
+						<hr/>
+					</li>
+					<li>
+						<p>If you have a location-based site and you have a site search engine you cna show a map next to the results.</p>
+						<p>For example if your user is searching for 'Buenos Aires' you can just set a map and use the setAddress method with the search term.</p>
+						<p>The map will automatically be pointed to Buenos Aires, Argentina.</p>
+					</li>
+				</ul>
+			</li>
+			<li id="code-examples">
+				<h2>Code Examples</h2>
+				<ul class="examples">
+					<li id="embed">
+						<h3>Embed a map from Google Maps with just a single line of JavaScript</h3>
+						<p>If you want to just embed a Google map in you application just call the plugin on an empty div element.</p>
+						<p>You can change the default options like default location, map type, zoom level and whether it should be draggable.</p>
+						<p>To see how to change the full list of options see the <a href="demos/all-options.html">all options demo source</a>.</p>
+						<code>
+							<p class="html">&lt;div id="embed-map" class="css-map"&gt;&lt;/div&gt;</p>
+							<p class="html">&lt;script&gt;</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;$('#embed-map').setmap();</p>
+							<p class="html">&lt;/script&gt;</p>
+						</code>
+						<div class="map css-map"></div>
+					</li>
+					<li id="dimensions">
+						<h3>Adjust the map dimensions by pure CSS</h3>
+						<p>You can have any kind of map dimensions by just setting the width and the height of the div element with pure CSS.</p>
+						<code>
+							<p class="html">&lt;div id="dimensions-map" style="width: 350px;height:200px;"&gt;&lt;/div&gt;</p>
+							<p class="html">&lt;script&gt;</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;$('#dimensions-map').setmap();</p>
+							<p class="html">&lt;/script&gt;</p>
+						</code>
+						<div style="width: 350px;height:200px;" class="map"></div>
+					</li>
+					<li id="geocoding">
+						<h3>Geocoding</h3>
+						<p>To geocode something means to take an address or a point and return its coordinates.</p>
+						<code>
+							<p class="html">&lt;div id="geocoding-map" class="css-map"&gt;&lt;/div&gt;</p>
+							<p class="html">&lt;p&gt;Move the marker to see geocoding in action.&lt;/p&gt;</p>
+							<p class="html">&lt;p class="lat"&gt;Latitude: &lt;span&gt;&lt;/span&gt;&lt;/p&gt;</p>
+							<p class="html">&lt;p class="lng"&gt;Longitude: &lt;span&gt;&lt;/span&gt;&lt;/p&gt;</p>
+							<p class="html">&lt;script&gt;</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;$('#geocoding-map').setmap({</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;drop: function ( lat, lng ) {</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var parent = $('#geocoding-map').parent();</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.lat span', parent).text(lat);</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.lng span', parent).text(lng);</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;});</p>
+							<p class="html">&lt;/script&gt;</p>
+						</code>
+						<div id="geocoding-map" class="css-map"></div>
+						<p>Move the marker to see geocoding in action.</p>
+						<p class="lat">Latitude: <span></span></p>
+						<p class="lng">Longitude: <span></span></p>
+					</li>
+					<li id="reversed">
+						<h3>Reversed Geocoding</h3>
+						<p>The reversed geocoding is very useful when you need a human readable address of a place. Just give it a point and you will get the full address of it.</p>
+						<code>
+							<p class="html">&lt;div id="reversed-map" class="css-map"&gt;&lt;/div&gt;</p>
+							<p class="html">&lt;p&gt;Move the marker to see reversed geocoding in action.&lt;/p&gt;</p>
+							<p class="html">&lt;p class="address"&gt;Full address: &lt;span&gt;&lt;/span&gt;&lt;/p&gt;</p>
+							<p class="html">&lt;script&gt;</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;$('#reversed-map').setmap({</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;drop: function ( lat, lng, address ) {</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var parent = $('#reversed-map').parent();</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.address span', parent).text(address);</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;});</p>
+							<p class="html">&lt;/script&gt;</p>
+						</code>
+						<div id="reversed-map" class="css-map"></div>
+						<p>Move the marker to see reversed geocoding in action.</p>
+						<p class="address">Full address: <span></span></p>
+					</li>
+					<li id="geolocation">
+						<h3>HTML5 Geolocation</h3>
+						<p>HTML5 introduces a great way to get the current user location.</p>
+						<p>When you set the current option as true the map center will default to the user's location.</p>
+						<p>If the service fails or the user's browser doesn't support it, the center will fall back to the position object.</p>
+						<code>
+							<p class="html">&lt;div id="geolocation-map" class="css-map"&gt;&lt;/div&gt;</p>
+							<p class="html">&lt;script&gt;</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;$('#geolocation-map').setmap({</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;marker: {</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current: true</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;});</p>
+							<p class="html">&lt;/script&gt;</p>
+						</code>
+						<div id="geolocation-map" class="css-map"></div>
+					</li>
+					<li id="setAddress">
+						<h3>setAddress method</h3>
+						<p>You can set the location of the marker manually with the setAddress method.</p>
+						<p>A great example is the demo with a <a href="demos/map-with-geocoding.html">map in a form</a>.</p>
+						<p>After you have initialized the plugin on a div element, just call it with 'setAddress' as a first parameter and the new address as a second.</p>
+						<p>You can provide a callback to get the new point coordinates and a full address of the place.</p>
+						<code>
+							<p class="html">&lt;div id="address-map" class="css-map"&gt;&lt;/div&gt;</p>
+							<p class="html">&lt;script&gt;</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;$('#address-map').setmap().setmap('setAddress', 'Tokyo, Japan', function ( lat, lng, address ) {</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var map = $('#address-map');</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.after('&lt;p&gt;Latitude: ' + lat + '&lt;/p&gt;');</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.after('&lt;p&gt;Longitude ' + lng + '&lt;/p&gt;');</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.after('&lt;p&gt;Address ' + adress + '&lt;/p&gt;');</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;});</p>
+							<p class="html">&lt;/script&gt;</p>
+						</code>
+						<div id="address-map" class="css-map"></div>
+					</li>
+					<li id="components">
+						<h3>Use the address components</h3>
+						<p>When you use reversed geocoding either with the drop callback or with the setAddress method you can use the address components.</p>
+						<p>Just set the components parameter to true and these functions will return an array of objects as a third parameter.</p>
+						<p>The breaking down of the address allows you to build more generic or more specific address for your application.</p>
+						<code>
+							<p class="html">&lt;div id="components-map" class="css-map"&gt;&lt;/div&gt;</p>
+							<p class="html">&lt;script&gt;</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;$('#components-map').setmap({</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;components: true,</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;drop: function ( lat, lng, components) {</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var container = $('#components-map').parent();</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container.append('&lt;p&gt;Latitude: ' + lat + '&lt;/p&gt;');</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container.append('&lt;p&gt;Longitude ' + lng + '&lt;/p&gt;');</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.each(components, function ( index, value ) {</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container.append('&lt;p&gt;' + index + ': ' + value.long_name + '&lt;/p&gt;');</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;});</p>
+							<p class="html">&lt;/script&gt;</p>
+						</code>
+						<div id="components-map" class="css-map"></div>
+						<p>Move the marker to see the new address broken into components.</p>
+					</li>
+					<li id="destroy-example">
+						<h3>Destroying a plugin instance</h3>
+						<p>When you don't want to use a setmap object anymore you better destroy it!</p>
+						<p>When you call the destroy method the DOM element is reversed back to its previous state.</p>
+						<code>
+							<p class="html">&lt;div id="destroy-map" class="css-map"&gt;&lt;/div&gt;</p>
+							<p class="html">&lt;p&gt;</p>
+							<p class="html">&nbsp;&nbsp;&nbsp;&nbsp;&lt;button id="map-destroy"&gt;Destroy&lt;/button&gt;</p>
+							<p class="html">&lt;/p&gt;</p>
+							<p class="html">&lt;script&gt;</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;$('#destroy-map').setmap();</p>
+							<p></p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;$('#map-destroy').bind('click', function () {</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('#destroy-map').setmap('destroy');</p>
+							<p class="js">&nbsp;&nbsp;&nbsp;&nbsp;});</p>
+							<p class="html">&lt;/script&gt;</p>
+						</code>
+						<p>Click the Destroy button to return the map div to its initial state.</p>
+						<div id="destroy-map" class="css-map"></div>
+						<p>
+							<button id="map-destroy">Destroy</button>
+						</p>
+					</li>
+				</ul>
+			</li>
+			<li id="options">
+				<h2>Options</h2>
+				<p>Here is a complete object for initializing a map with all the default values.</p>
+				<p>If you don't specify a certain option the default will be used automatically.</p>
+				<pre>
+{
+	<a href="#opt-map">map</a>: {
+		<a href="#opt-zoom">zoom</a>: 12, // zoom level: from 0 to 20; higher is closer
+		<a href="#opt-zoomcontrols">zoomControls</a>: 'large', // 'small' or 'large' - defines whether a zoom slider will be present
+		<a href="#opt-type">type</a>: 'hybrid', // map type: hybrid, terrain, roadmap, satellite
+		<a href="#opt-draggable">draggable</a>: true, // should the users be able to drag the map
+		<a href="#opt-disabled">disabled</a>: false, // creates a static map with no visual, mouse or keyboard controls
+		<a href="#opt-streetview">streetView</a>: true // streetview controls
+	},
+	<a href="#opt-marker">marker</a>: {
+		<a href="#opt-position">position</a>: { // default location
+			latitude: -34.397, 
+			longitude: 150.644
+		},
+		<a href="#opt-current">current</a>: false, // should the default location be the user's current location
+		<a href="#opt-marker-draggable">draggable</a>: true, // should the users be able to drag the marker
+		<a href="#opt-animation">animation</a>: 'drop', // 'drop' or 'bounce' - defines the marker animation
+		<a href="#opt-title">title</a>: '' // the marker title on hover
+	},
+	<a href="#opt-components">components</a>: false, // global setting for address returned from reversed geocoding
+	<a href="#opt-drop">drop</a>: function (latitude, longitude, fullAddress ) {
+		// returns coordinates and full address after the marker is moved and dropped
+	}
+};
+				</pre>
+				<p>Let's go through all of the available options:</p>
+				<ul>
+					<li id="opt-map">
+						<strong>map</strong>
+						<ul>
+							<li id="opt-zoom">
+								<strong>zoom:</strong>
+								<p>The zoom property is a number between 0 and 20 and defines the default zoom level when tha map initializes.</p>
+								<p>The user will be able to change the zoom level through visual, mouse and keyboard controls unless the disabled property is set to true.</p>
+							</li>
+							<li id="opt-zoomcontrols">
+								<strong>zoomControls</strong>
+								<p>If set to true the map will have not only a +/- buttons for zooming, but also a zoom slider.</p>
+								<p>If the disabled property is set to true the map will not have any zoom controls.</p>
+							</li>
+							<li id="opt-type">
+								<strong>type</strong>
+								<p>The default map type for the map. There are four available values:</p>
+								<ul>
+									<li><strong>hybrid</strong> (default): a satellite map with main roads and other details</li>
+									<li><strong>roadmap</strong>: detailed map of roads, buildings and others with no satellite imagery</li>
+									<li><strong>satellite</strong>: a satellite map with only labels on top</li>
+									<li><strong>terrain</strong>: a map showing the structure of the terrain, but not the details in the area</li>
+								</ul>
+								<p>The user will be able to change the map according to his/her preference unless the disabled property is set.</p>
+							</li>
+							<li id="opt-draggable">
+								<strong>draggable</strong>
+								<p>If set to false the users will not be able to drag the map, but they will be able to zoom in and out, navigate with the keyboard and more.</p>
+								<p>This option is useful when you want to show some area and the user be able to zoom in and out, but not to be able to go explore easily other areas.</p>
+							</li>
+							<li id="opt-disabled">
+								<strong>disabled</strong>
+								<p>When set to true the created map is static and it has no zoom controls, no map types controls and no Street View.</p>
+								<p>The user will not be able to drag the map or the marker and will no be able to navigate through the map or zoom in and out neither with the mouse nor the keyboard.</p>
+							</li>
+							<li id="opt-streetview">
+								<strong>streetview</strong>
+								<p>If set to true the user will be able to drag the yellow Street View marker onto the map and observe the area and images of the area in Street View.</p>
+							</li>
+						</ul>
+					</li>
+					<li id="opt-marker">
+						<strong>marker</strong>
+						<ul>
+							<li id="opt-position">
+								<strong>position</strong>
+								<p>The position property is an object which defines the starting location of the marker. The map will be initially centered to this location as well.</p>
+								<p>The position object contains latitude and longitude properties to define exact location.</p>
+								<p>It is highly recommended to always provide the position option depending on the use case.</p>
+								<p>For example if your business is located in Australia you will not want to initialize the map in the US and later navigate the user to your location.</p>
+								<p>When the current property is set to true the position is not used.</p>
+							</li>
+							<li id="opt-current">
+								<strong>current</strong>
+								<p>When set to true the initial location of the marker and map will be the current user's location.</p>
+								<p>The plugin uses HTML5 Geolocation to define the location of the user.</p>
+								<p>If the Geolocation fails, the user has forbidden the HTML5 Geolocation or the browser doesn't support it the map will fallback to the position property.</p>
+								<p>So again it is highly recommended to set the position property to something useful.</p>
+								<p>Note that if your user is using a private browsing option like Incognito in Google Chrome Geolocation will not work.</p>
+							</li>
+							<li id="opt-marker-draggable">
+								<strong>draggable</strong>
+								<p>If set to false the users will not be able to move the marker, but they will be able to drag around the map around and explore the area.</p>
+								<p>This option is useful when you do not any location input from the user, but rather show something and its whereabouts on a map.</p>
+							</li>
+							<li id="opt-animation">
+								<strong>animation</strong>
+								<p>When the user drags and drops the marker a simple animation is shown.</p>
+								<p>You can set it either to 'bounce' or 'drop'. The default is 'drop', because it is more cool.</p>
+							</li>
+							<li id="opt-title">
+								<strong>title</strong>
+								<p>You can define a short text to be shown as a small tooltip next to the marker when the user hovers it.</p>
+							</li>
+						</ul>
+					</li>
+					<li id="opt-components">
+						<strong>components</strong>
+						<p>The components property is a global setting for the map related to the reversed geocoding functionality.</p>
+						<p>When the components option is set to true the address from the reversed geocoding will be returned as an array of objects instead of a string.</p>
+						<p>The default value is set to false, because in most cases you will want the full address.</p>
+						<p>The address is built with every address component long name concated with a comma.</p>
+						<p>If you want to use only some of the adress components (e.g. just city and state) then set this property to true.</p>
+						<p>The reversed geocoding will return an array with object elements containing short and long name for every component.</p>
+						<p>For more clarity see the <a href="#components">components example</a>.</p>
+					</li>
+					<li id="opt-drop">
+						<strong>drop</strong>
+						<p>The drop option is a handler function which is called every time the marker is dropped.</p>
+						<p>It is called with three parameters - latitude, longitude and an address.</p>
+						<p>So every time the user moves and drops the marker a geocoding and reversed geocoding is performed.</p>
+						<p>This is very useful when you want a location input from your users to save the result in a database or something.</p>
+						<p>Not only you get an exact location, but also a human readable address implementation of that location without the need to write it.</p>
+						<p>Note that if haven't specified a function for the drop property the geocoding and the reversed geocoding on a marker drop is not performed and you won't loose performance of your application.</p>
+					</li>
+				</ul>
+			</li>
+			<li id="methods">
+				<h2>Methods</h2>
+				<ul>
+					<li id="setAddress">
+						<p><strong>setAddress</strong></p>
+						<p>This method allows you to change the map location dynamically with a partial address given.</p>
+						<p>It performs a reversed geocoding and you get a latitude, a longitude and a full address.</p>
+						<p>So you can use it not only to change the map location, but to get more location information for your partial address as well.</p>
+						<p>If you have set the components options to true this method will have an array of components as a third parameter isntead of a string.</p>
+						<p>The method is very useful to update a map from the user's input.</p>
+						<p>You can check the <a href="demos/map-with-geocoding.html">map in a form demo</a> for a great example.</p>
+					</li>
+					<li id="setCoords">
+						<p><strong>setCoords</strong></p>
+						<p>This method is very similar to setAddress, but instead of a string addres you can set the map location through coordinates.</p>
+					</li>
+					<li id="destroy">
+						<p><strong>destroy</strong></p>
+						<p>The destroy method removes the map and restores the map DOM element to its previous state.</p>
+						<p>If you work with lots of maps on the same page is essential to destroy your objects than rather just hiding them.</p>
+						<p>After you have destroyed a setmap instance you can initalize it again on the same element with no problems. You can even use different options.</p>
+						<p>Here is <a href="demos/all-options.html">an example</a> of multiple destroy and init calls.</p>
+					</li>
+				</ul>
+			</li>
+			<li id="demos">
+				<a href="demos/"><h2>Demos</h2></a>
+				<ul>
+					<li><a href="demos/single-map.html" target="_blank">Simple map</a></li>
+					<li><a href="demos/map-with-geocoding.html" target="_blank">Geocoding and reversed geocoding in a form (the most appropriate)</a></li>
+					<li><a href="demos/multiple-maps-geocoding.html" target="_blank">Multiple maps</a></li>
+					<li><a href="demos/hidden-geocoding.html" target="_blank">Hidden geocoding and reversed geocoding</a></li>
+					<li><a href="demos/map-components.html" target="_blank">Working with address components</a></li>
+					<li><a href="demos/all-options.html" target="_blank">Demo with all the default options</a></li>
+				</ul>
+			</li>
+			<li id="notes">
+				<h2>Additional Notes</h2>
+				<ul>
+					<li>I have provided a minifed version of the setmap plugin and it is just a 1.56kb when gzipped.</li>
+					<li>If you have questions I recommend:
+						<ol>
+							<li>go through the commented source of the <a href="demos/all-options.html">all options demo</a></li>
+							<li>play with the other <a href="demos/">demos</a></li>
+							<li>contact me at my <a href="http://codecanyon.net/user/hkdobrev" target="_blank">CodeCanyon profile page</a></li>
+						</ol>
+					</li>
+				</ul>
+			</li>
+			<li id="contact">
+				<dl>
+					<dt>Email: </dt>
+					<dd><a href="mailto:hkdobrev@gmail.com" target="_blank">hkdobrev@gmail.com</a></dd>
+					<dt>CodeCanyon: </dt>
+					<dd><a href="http://codecanyon.net/user/hkdobrev">hkdobrev</a></dd>
+					<dt>Twitter: </dt>
+					<dd><a href="http://twitter.com/hkdobrev">@hkdobrev</a></dd>
+					<dt>LinkedIn: </dt>
+					<dd><a href="http://www.linkedin.com/in/hkdobrev">Haralan Dobrev</a></dd>
+					<dt>Facebook: </dt>
+					<dd><a href="http://facebook.com/hkdobrev">Haralan Dobrev</a></dd>
+				</dl>
+				<p>If you have a feature request, questions or problems using the plugin please do not hesitate to write me an email!</p>
+				<p></p>
+			</li>
+			<li id="final">
+				<p>Thank you for purchasing my setmap plugin (and reading this looong documentation)!</p>
+				<p>I will be glad to update it further in the future.</p
+			</li>
+		</ol>
+		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+		<script src="http://maps.googleapis.com/maps/api/js?language=en&sensor=false&region=US"></script>
+		<script defer src="js/setmap.js"></script>
+		<script>
+			$(function () {
+				
+				$('.map').setmap();
+				
+				$('#geocoding-map').setmap({
+					drop: function ( lat, lng ) {
+						var parent = $('#geocoding-map').parent();
+						$('.lat span', parent).text(lat);
+						$('.lng span', parent).text(lng);
+					}
+				});
+				
+				$('#reversed-map').setmap({
+					drop: function ( lat, lng, address ) {
+						var parent = $('#reversed-map').parent();
+						$('.address span', parent).text(address);
+					}
+				});
+				
+				$('#geolocation-map').setmap({
+					marker: {
+						current: true
+					}
+				});
+				
+				$('#address-map').setmap().setmap('setAddress', 'Tokyo, Japan', function ( lat, lng, address ) {
+					var map = $('#address-map');
+					map.after('<p>Latitude: ' + lat + '</p>');
+					map.after('<p>Longitude ' + lng + '</p>');
+					map.after('<p>Address: ' + address + '</p>');
+				});
+				
+				$('#components-map').setmap({
+					components: true,
+					drop: function ( lat, lng, components) {
+						var container = $('#components-map').parent();
+						container.append('<p>Latitude: ' + lat + '</p>');
+						container.append('<p>Longitude ' + lng + '</p>');
+						$.each(components, function ( index, value ) {
+							container.append('<p>' + index + ': ' + value.long_name + '</p>');
+						});
+					}
+				});
+				
+				$('#destroy-map').setmap();
+				
+				$('#map-destroy').bind('click', function () {
+					$('#destroy-map').setmap('destroy');
+				});
+				
+			});
+			
+		</script>
+	</body>
+</html>
