@@ -21,4 +21,4 @@ But you can also:
 
 The documentation and the demos are for version 1.0. The API of the plugin is not compatible with the previous version so use it only if you could retrieve the API from the source.
 
-I will be updating the docs and the examples in the near future and they will be available at this address then:dobrev.github.com/setmap
+I will be updating the docs and the examples in the near future and they will be available at this address: http://hkdobrev.github.com/setmap
