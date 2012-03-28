@@ -4,7 +4,7 @@ This is very simple to use, but a powerful jQuery plugin for embedding maps.
 
 You could embed a Google map with a single line:
 
-  $('#map').setmap();
+  `$('#map').setmap();`
 
 But you can also:
 
