@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Map Demo with Multiple Maps - SetMap jQuery Plugin</title>
+		<link href="../css/main.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<form method="POST" action="">
+			<div>
+				<div>
+					<label for="location">Location</label>
+					<p class="desc"><small>Drag marker to fix location or fill in the address fields</small></p>
+				</div>
+				<div>
+					<input type="text" id="location" name="location" tabindex="3" />
+					<button class="actButton" id="searchLoc" type="button">Search</button>
+					<div class="map css-map" id="top-map"></div>
+					<p>
+						<input type="text" name="lat" id="lat" value="-34.397" />
+						<input type="text" name="lng" id="lng" value="150.644" />
+					</p>
+				</div>
+			</div>
+			<div class="map css-map"></div>
+		</form>
+		<hr/>
+		<div id="other-map" class="css-map"></div>
+		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+		<script src="http://maps.googleapis.com/maps/api/js?language=en&sensor=false&region=US"></script>
+		<script defer src="../js/setmap.js"></script>
+		<script>
+			$(function () {
+				$('.map').setmap({
+					drop: function () {
+						$('#lat').val(this.position.lat);
+						$('#lng').val(this.position.lng);
+						$('#location').val(this.position.address);
+						console.log($(this.map).setmap('type'));
+					},
+					type: function () {
+						console.log(this);
+					},
+					zoom: function () {
+						console.log(this);
+					},
+					center: function () {
+						console.log(this);
+					},
+					markers: [
+						{
+							position: {
+								lat: 40.733,
+								lng: -74.007
+							},
+							title: 'New York! New Yoooork!'
+						},
+						{
+							position: {
+								lat: 40.776,
+								lng: -73.895
+							}
+						}
+					],
+					map: {
+						zoom: 10,
+						center: {
+							lat: 40.733,
+							lng: -74.007
+						}
+					}
+				});
+				
+				$('#searchLoc').bind('click', function () {
+					$('.map').setmap('center', $('#location').val(), function ( latitude, longitude, fullAddress ) {
+						$('#lat').val(latitude);
+						$('#lng').val(longitude);
+						$('#location').val(fullAddress);
+					});
+				});
+	
+				$('#location').bind('keyup', function ( e ) {
+					if( e.keyCode === 13 ) {
+						$('#searchLoc').trigger('click');
+					}
+				});
+				
+				$('#other-map').setmap({
+					map: {
+						center: {
+							latitude: 40.733,
+							longitude: -74.007
+						},
+						current: true
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
