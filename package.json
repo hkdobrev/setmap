@@ -1,0 +1,45 @@
+{
+	"name": "jquery.setmap",
+	"title": "jQuery Setmap",
+	"description": "jQuery plugin for Google maps",
+	"version": "2.0.0",
+	"homepage": "https://github.com/hkdobrev/setmap",
+	"author": {
+		"name": "Haralan Dobrev",
+		"email": "hkdobrev@gmail.com",
+		"url": "http://hkdobrev.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/hkdobrev/setmap.git"
+	},
+	"bugs": {
+		"url": "https://github.com/hkdobrev/setmap/issues"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/hkdobrev/setmap/blob/master/LICENSE-MIT"
+		}
+	],
+	"dependencies": {
+		"jquery": "~1.5"
+	},
+	"keywords": [
+		"jQuery",
+		"Google",
+		"Google Maps",
+		"maps",
+		"setmap",
+		"plugin",
+		"geocoding",
+		"reversed geocoding",
+		"latitude",
+		"longitude",
+		"address",
+		"directions",
+		"markers",
+		"position",
+		"geolocation"
+	]
+}

@@ -1,0 +1,651 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"lat",
+				"latLng"
+			],
+			[
+				"BY",
+				"Bicycling"
+			],
+			[
+				"elem",
+				"element"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"ena",
+				"enabled"
+			],
+			[
+				"ud",
+				"undefined"
+			],
+			[
+				"opto",
+				"options"
+			],
+			[
+				"met",
+				"method"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"j",
+				"jQuery"
+			],
+			[
+				"jq",
+				"jquery"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 34.0,
+		"selected_items":
+		[
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tabs ",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"contabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"synt js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"conv ta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"git com",
+				"Git: Quick Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git commit",
+				"Git: Quick Commit"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"markd",
+				"Markdown Preview: current file in browser"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"todo",
+				"Show TODOs in project and open files"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"github",
+				"GitHub: Open Starred Gist in Editor"
+			],
+			[
+				"gith",
+				"GitHub: Open Starred Gist in Browser"
+			]
+		],
+		"width": 453.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/hkdobrev/Projects/setmap/src/jquery.setmap.js",
+		"/home/hkdobrev/Projects/setmap/test/jquery.setmap_test.js",
+		"/home/hkdobrev/Projects/vagrant/chef-cookbooks/sites/recipes/default.rb",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/hkdobrev/Projects/setmap/test/jquery.setmap.html",
+		"/home/hkdobrev/Projects/setmap/test/helpers/tests.css",
+		"/home/hkdobrev/Projects/setmap/test/qunit.helper.js",
+		"/home/hkdobrev/Projects/setmap/setmap.sublime-workspace",
+		"/home/hkdobrev/Projects/jquerypl/libs/jquery/jquery.js",
+		"/home/hkdobrev/Projects/jquerypl/test/jquery.setmap_test.js",
+		"/home/hkdobrev/Projects/jquerypl/test/jquery.setmap.html",
+		"/home/hkdobrev/Projects/jquerypl/test/helper.js",
+		"/home/hkdobrev/Projects/jquerypl/LICENSE-MIT",
+		"/home/hkdobrev/Projects/jquerypl/package.json",
+		"/home/hkdobrev/Projects/jquerypl/grunt.js",
+		"/home/hkdobrev/Projects/jquerypl/README.md",
+		"/home/hkdobrev/Projects/setmap/tests/jquery.js",
+		"/home/hkdobrev/Projects/setmap/tests/gmaps.js",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/User/testjs.sublime-snippet",
+		"/home/hkdobrev/Projects/setmap/tests/index.html",
+		"/home/hkdobrev/Projects/setmap/tests/qunit/testcase.js",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/hkdobrev/Projects/setmap/tests/unit/index.html",
+		"/home/hkdobrev/Projects/setmap/tests/unit/main.js",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/Theme - Soda/README.md",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/Theme - Soda/Soda Dark.sublime-theme",
+		"/home/hkdobrev/Projects/setmap/.git/config",
+		"/home/hkdobrev/Projects/setmap/tests/qunit/package.json",
+		"/home/hkdobrev/Projects/setmap/.gitmodules",
+		"/home/hkdobrev/Projects/vhosts/resource.conf",
+		"/home/hkdobrev/Projects/vhosts/setmap.conf",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/Theme - Default/Default.sublime-theme",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/Theme - Soda/package-metadata.json",
+		"/home/hkdobrev/Projects/setmap/setmap.js",
+		"/home/hkdobrev/Projects/setmap/setmap.min.js",
+		"/home/hkdobrev/Projects/setmap/README.md",
+		"/home/hkdobrev/Projects/setmap/js/jquery.mobile-1.0.min.js",
+		"/home/hkdobrev/Projects/setmap/tests/qunit/qunit/qunit.js",
+		"/home/hkdobrev/Projects/setmap/css/main.css",
+		"/home/hkdobrev/Projects/setmap/js/setmap.js",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/SideBarGit/SideBarGit.sublime-settings",
+		"/home/hkdobrev/Projects/setmap/README",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/hkdobrev/Projects/sublime/clippings.sublime-project",
+		"/home/hkdobrev/Projects/vagrant/clippings/config/deploy/staging.rb",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/clippings/main/classes/controller/favorite/companies.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/application/classes/service/beanstalkd.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/extensions/services-manager/classes/kohana/service/beanstalkd.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/clippings/main/classes/controller/likes.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/application/classes/model/users/favorite/company.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/clippings/main/classes/controller/images.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/application/classes/model/image.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/extensions/services-manager/classes/kohana/service/facebook.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/clippings/main/classes/controller/matchmaker.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/application/classes/model/company.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/application/classes/model/builder/company.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/clippings/main/tests/integration/matchmakerTest.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/clippings/main/tests/integration/companiesTest.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/clippings/main/classes/controller/companies.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/clippings/main/classes/controller/me.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/clippings/main/classes/controller/users.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/clippings/admin/tests/integration/companiesTest.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/extensions/http-resource/classes/kohana/resource/jelly/behavior/sluggable.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/extensions/http-resource/classes/kohana/resource/routes.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/extensions/http-resource/config/http-resource.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/application/config/http-resource.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/extensions/http-resource/classes/kohana/resource/route.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/modules/extensions/services-manager/vendor/facebook-sdk/facebook.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/application/migrations/1330354033_update_slugs.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/Capfile",
+		"/home/hkdobrev/Projects/vagrant/clippings/system/classes/kohana/url.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/system/classes/url.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/application/classes/url.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/system/tests/kohana/ArrTest.php",
+		"/home/hkdobrev/Projects/vagrant/clippings/application/classes/model/user.php",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/User/Distraction Free.sublime-settings",
+		"/home/hkdobrev/.config/sublime-text-2/Packages/User/GitHub.sublime-settings",
+		"/home/hkdobrev/Projects/vagrant/clippings/web/js/plugins/jquery.clippings.bookmarklet.forms.js",
+		"/home/hkdobrev/Projects/vagrant/clippings/web/js/plugins/jquery.bookmarklet.staging.js",
+		"/home/hkdobrev/Projects/vagrant/clippings/web/js/plugins/jquery.clippings.bookmarklet.js",
+		"/home/hkdobrev/Projects/vagrant/clippings/application/config/database.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"latLng",
+			"longitude",
+			"LatLng",
+			"lng",
+			"lat",
+			"lng",
+			"LatLng",
+			"all",
+			"^(?!match_)all",
+			"(?!match_)all",
+			"(?!(match_))all",
+			"(?!match_)all",
+			"all",
+			"lat",
+			"ctrl+d",
+			"lat",
+			"lng",
+			"find",
+			"lat",
+			"find",
+			"find_under_expand",
+			"ctrl+d",
+			"lat",
+			"Lat",
+			"lat",
+			"Lat",
+			"lat",
+			"latitude",
+			"function",
+			"Bicycling",
+			"style",
+			"er",
+			" || $.",
+			"pointer",
+			"emptyString",
+			"masonry",
+			"'",
+			"masonry",
+			"awesome",
+			"  module('jQuery#awesome', {\n",
+			"awesome",
+			"mapTypes",
+			"setDirections",
+			"directions:",
+			"getMarkerOptions",
+			"(\\s)e\\(",
+			"\\se\\(",
+			"\\se(",
+			" e(",
+			"e(",
+			"setPosition",
+			"markers",
+			"markerAnimations",
+			"mapTypes",
+			"defaultOptions",
+			"try",
+			"core",
+			", '",
+			"undefined",
+			"f ",
+			"number",
+			"f ",
+			" f",
+			"t,",
+			"t",
+			"t ",
+			" t",
+			" t0",
+			" t",
+			" t ",
+			"functionS",
+			"numberString",
+			"String",
+			"objectString",
+			"String",
+			"emptyString",
+			"objectString",
+			"styleString",
+			"String",
+			"function \\(",
+			"function((?: [a-zA-z]+)?) \\(",
+			"function [a-zA-z] \\(",
+			"$(f",
+			"4",
+			"er",
+			"word",
+			"delete",
+			"word",
+			".",
+			"json",
+			"xml",
+			"plist",
+			"xml",
+			"git",
+			"ctrl+alt+",
+			"ctrl+alt+s",
+			"ctrl+shift+w",
+			"location",
+			"title",
+			"ctrl",
+			"keys",
+			"} }",
+			"ctrl+e",
+			"line",
+			"delete_",
+			"press",
+			"key",
+			"command",
+			"run_",
+			"\"], \"",
+			"ctrl+p",
+			"ctrl+alt+t",
+			"ctrl+shift+t",
+			"ctrl+t",
+			"super+p",
+			"super+t",
+			"super+p",
+			"super+t",
+			"todo",
+			"	\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\"",
+			"$1\\$.setmap.error\\(",
+			"function\\(",
+			"function $1\\("
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"set",
+				"test/jquery.setmap_test.js"
+			],
+			[
+				"html",
+				"test/jquery.setmap.html"
+			],
+			[
+				"setmap.js",
+				"src/jquery.setmap.js"
+			],
+			[
+				"her",
+				"test/qunit.helper.js"
+			],
+			[
+				"jq",
+				"libs/jquery/jquery.js"
+			],
+			[
+				"kohanaservicebea",
+				"modules/extensions/services-manager/classes/kohana/service/beanstalkd.php"
+			],
+			[
+				"servicebean",
+				"application/classes/service/beanstalkd.php"
+			],
+			[
+				"contrfavcomp",
+				"modules/clippings/main/classes/controller/favorite/companies.php"
+			],
+			[
+				"confsta",
+				"config/deploy/staging.rb"
+			],
+			[
+				"contrme",
+				"modules/clippings/main/classes/controller/me.php"
+			],
+			[
+				"contrusers",
+				"modules/clippings/main/classes/controller/users.php"
+			],
+			[
+				"contrcom",
+				"modules/clippings/main/classes/controller/companies.php"
+			],
+			[
+				"companiestest",
+				"modules/clippings/main/tests/integration/companiesTest.php"
+			],
+			[
+				"companieste",
+				"modules/clippings/admin/tests/integration/companiesTest.php"
+			],
+			[
+				"mat",
+				"modules/clippings/main/tests/integration/matchmakerTest.php"
+			],
+			[
+				"modelcompa",
+				"application/classes/model/company.php"
+			],
+			[
+				"buildercom",
+				"application/classes/model/builder/company.php"
+			],
+			[
+				"modelcompany",
+				"application/classes/model/company.php"
+			],
+			[
+				"contrma",
+				"modules/clippings/main/classes/controller/matchmaker.php"
+			],
+			[
+				"kohanaresourceroutes",
+				"modules/extensions/http-resource/classes/kohana/resource/routes.php"
+			],
+			[
+				"confhttp",
+				"modules/extensions/http-resource/config/http-resource.php"
+			],
+			[
+				"confightt",
+				"modules/extensions/http-resource/config/http-resource.php"
+			],
+			[
+				"kohanaresourcerout",
+				"modules/extensions/http-resource/classes/kohana/resource/route.php"
+			],
+			[
+				"kohanaresourcejellybehsl",
+				"modules/extensions/http-resource/classes/kohana/resource/jelly/behavior/sluggable.php"
+			],
+			[
+				"servicefacebook",
+				"modules/extensions/services-manager/classes/kohana/service/facebook.php"
+			],
+			[
+				"modelimage",
+				"application/classes/model/image.php"
+			],
+			[
+				"contrimage",
+				"modules/clippings/main/classes/controller/images.php"
+			],
+			[
+				"modelfavco",
+				"application/classes/model/users/favorite/company.php"
+			],
+			[
+				"modelfavcom",
+				"application/classes/model/users/favorite/company.php"
+			],
+			[
+				"contrfavcom",
+				"modules/clippings/main/classes/controller/favorite/companies.php"
+			],
+			[
+				"contrlikes",
+				"modules/clippings/main/classes/controller/likes.php"
+			],
+			[
+				"beansta",
+				"application/classes/service/beanstalkd.php"
+			],
+			[
+				"migrationsslugs",
+				"application/migrations/1330354033_update_slugs.php"
+			],
+			[
+				"configsta",
+				"config/deploy/staging.rb"
+			],
+			[
+				"url.p",
+				"system/classes/kohana/url.php"
+			],
+			[
+				"url.",
+				"system/classes/url.php"
+			],
+			[
+				"arrtest",
+				"system/tests/kohana/ArrTest.php"
+			],
+			[
+				"modeluser",
+				"application/classes/model/user.php"
+			],
+			[
+				"modeuser",
+				"application/classes/model/user.php"
+			],
+			[
+				"jquery.book",
+				"web/js/plugins/jquery.bookmarklet.staging.js"
+			],
+			[
+				"jquery.boo",
+				"web/js/plugins/jquery.bookmarklet.staging.js"
+			],
+			[
+				"configdat",
+				"application/config/database.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"cl",
+				"/home/hkdobrev/Projects/sublime/clippings.sublime-project"
+			],
+			[
+				"",
+				"/home/hkdobrev/Projects/sublime/clippings.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 311.0,
+	"status_bar_visible": true
+}
