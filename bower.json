@@ -1,0 +1,43 @@
+{
+    "name": "setmap",
+    "version": "2.0.0-alpha.1",
+    "homepage": "https://github.com/hkdobrev/setmap",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/hkdobrev/setmap.git"
+    },
+    "authors": [
+        {
+            "name": "Haralan Dobrev",
+            "email": "hkdobrev@gmail.com",
+            "homepage": "http://hkdobrev.com"
+        }
+    ],
+    "description": "Embed Google Maps with ease",
+    "main": "lib/setmap.js",
+    "moduleType": [
+        "globals"
+    ],
+    "keywords": [
+        "maps",
+        "google",
+        "maps",
+        "jquery",
+        "plugin",
+        "geocoding",
+        "location",
+        "geolocation",
+        "coordinates",
+        "address"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests",
+        "grunt",
+        "Gruntfile.js"
+    ]
+}
