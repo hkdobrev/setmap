@@ -1,7 +1,6 @@
 var extend = require('underscore').extend,
     options = {
         boss: true,
-        camelcase: true,
         curly: true,
         eqeqeq: true,
         eqnull: true,
@@ -30,7 +29,8 @@ var extend = require('underscore').extend,
         node: true
     }),
     distOptions = extend({}, options, {
-        browser: true
+        browser: true,
+        camelcase: true
     }),
     devOptions = extend({}, distOptions, {
         devel: true
