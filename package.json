@@ -1,0 +1,41 @@
+{
+    "name": "setmap",
+    "version": "2.0.0-alpha.1",
+    "description": "Embed Google Maps with ease",
+    "homepage": "https://github.com/hkdobrev/setmap",
+    "author": {
+        "name": "Haralan Dobrev",
+        "email": "hkdobrev@gmail.com",
+        "url": "http://hkdobrev.com"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/hkdobrev/setmap.git"
+    },
+    "bugs": {
+        "url": "https://github.com/hkdobrev/setmap/issues"
+    },
+    "scripts": {
+        "build": "grunt build",
+        "start": "grunt watch",
+        "lint": "grunt lint:dist",
+        "style": "grunt style",
+        "test": "grunt test",
+        "dist": "grunt dist"
+    },
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "^0.4.4",
+        "grunt-contrib-clean": "~0.4.0",
+        "grunt-contrib-jshint": "^0.9.2",
+        "grunt-contrib-uglify": "^0.2.7",
+        "grunt-contrib-watch": "^0.5.3",
+        "grunt-jscs-checker": "^0.2.0",
+        "load-grunt-config": "^0.8.0-beta.1",
+        "underscore": "^1.6.0"
+    }
+}

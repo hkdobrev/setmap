@@ -1,0 +1,12 @@
+# Dependency directories
+/node_modules/
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+.tmp
+
+# Minified JavaScript files
+/dist
+
+# Logs
+npm-debug.log
