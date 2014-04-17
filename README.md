@@ -1,4 +1,4 @@
-### Setmap jQuery plugin for Google Maps v 2.0 ###
+### Setmap jQuery plugin for Google Maps
 
 This is very simple to use, but a powerful jQuery plugin for embedding maps.
 
